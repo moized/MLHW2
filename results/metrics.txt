@@ -1,0 +1,190 @@
+======================================================================
+MAKINE OGRENMESI ODEV 2 - OZELLIK SECIMI SONUCLARI
+Online News Popularity Veri Kumesi
+======================================================================
+
+1. SONUC TABLOSU
+----------------------------------------------------------------------
+Yontem               Ozellik    Accuracy     F1-Skoru     Egitim Suresi  
+----------------------------------------------------------------------
+Tüm Özellikler       59         0.6562       0.6849       3.53           s
+Filtreleme           15         0.6436       0.6776       0.58           s
+Sarmalayıcı          15         0.6464       0.6779       1.31           s
+Gömülü               15         0.6396       0.6823       0.75           s
+Optimal              30         0.6529       0.6827       2.03           s
+----------------------------------------------------------------------
+
+2. DETAYLI SONUCLAR
+----------------------------------------------------------------------
+
+[Tüm Özellikler]
+  Ozellik Sayisi: 59
+  Cross-Validation Sonuclari:
+    Accuracy:  0.6525 (+/- 0.0023)
+    F1-Score:  0.6820 (+/- 0.0017)
+  Test Sonuclari:
+    Accuracy:  0.6562
+    F1-Score:  0.6849
+    Precision: 0.6703
+    Recall:    0.7001
+  Egitim Suresi: 3.53 saniye
+
+[Filtreleme]
+  Ozellik Sayisi: 15
+  Cross-Validation Sonuclari:
+    Accuracy:  0.6431 (+/- 0.0062)
+    F1-Score:  0.6763 (+/- 0.0047)
+  Test Sonuclari:
+    Accuracy:  0.6436
+    F1-Score:  0.6776
+    Precision: 0.6549
+    Recall:    0.7020
+  Egitim Suresi: 0.58 saniye
+
+[Sarmalayıcı]
+  Ozellik Sayisi: 15
+  Cross-Validation Sonuclari:
+    Accuracy:  0.6481 (+/- 0.0062)
+    F1-Score:  0.6791 (+/- 0.0044)
+  Test Sonuclari:
+    Accuracy:  0.6464
+    F1-Score:  0.6779
+    Precision: 0.6594
+    Recall:    0.6975
+  Egitim Suresi: 1.31 saniye
+
+[Gömülü]
+  Ozellik Sayisi: 15
+  Cross-Validation Sonuclari:
+    Accuracy:  0.6386 (+/- 0.0064)
+    F1-Score:  0.6788 (+/- 0.0041)
+  Test Sonuclari:
+    Accuracy:  0.6396
+    F1-Score:  0.6823
+    Precision: 0.6441
+    Recall:    0.7254
+  Egitim Suresi: 0.75 saniye
+
+[Optimal]
+  Ozellik Sayisi: 30
+  Cross-Validation Sonuclari:
+    Accuracy:  0.6528 (+/- 0.0034)
+    F1-Score:  0.6828 (+/- 0.0039)
+  Test Sonuclari:
+    Accuracy:  0.6529
+    F1-Score:  0.6827
+    Precision: 0.6664
+    Recall:    0.6998
+  Egitim Suresi: 2.03 saniye
+
+3. EN BASARILI YONTEM ICIN CONFUSION MATRIX
+----------------------------------------------------------------------
+Yontem: Optimal (RFE - 30 ozellik)
+
+              Tahmin: 0    Tahmin: 1
+  Gercek: 0       2216         1482
+  Gercek: 1       1270         2961
+
+  True Negative (TN):  2216
+  False Positive (FP): 1482
+  False Negative (FN): 1270
+  True Positive (TP):  2961
+
+4. SECILEN OZELLIKLER
+----------------------------------------------------------------------
+
+[Filtreleme] (15 ozellik):
+   1. LDA_02
+   2. kw_avg_avg
+   3. is_weekend
+   4. data_channel_is_entertainment
+   5. data_channel_is_socmed
+   6. weekday_is_saturday
+   7. data_channel_is_tech
+   8. LDA_04
+   9. num_hrefs
+  10. kw_min_avg
+  11. weekday_is_sunday
+  12. LDA_01
+  13. num_keywords
+  14. global_sentiment_polarity
+  15. global_subjectivity
+
+[Sarmalayıcı] (15 ozellik):
+   1. n_non_stop_words
+   2. n_non_stop_unique_tokens
+   3. data_channel_is_socmed
+   4. data_channel_is_tech
+   5. kw_min_min
+   6. kw_max_min
+   7. kw_avg_min
+   8. kw_avg_max
+   9. kw_min_avg
+  10. kw_max_avg
+  11. kw_avg_avg
+  12. is_weekend
+  13. LDA_01
+  14. LDA_02
+  15. LDA_03
+
+[Gömülü] (15 ozellik):
+   1. kw_avg_avg
+   2. kw_max_avg
+   3. self_reference_min_shares
+   4. self_reference_avg_sharess
+   5. LDA_02
+   6. is_weekend
+   7. timedelta
+   8. kw_min_avg
+   9. LDA_01
+  10. self_reference_max_shares
+  11. data_channel_is_entertainment
+  12. LDA_04
+  13. kw_avg_min
+  14. n_unique_tokens
+  15. n_non_stop_unique_tokens
+
+[Optimal] (30 ozellik):
+   1. n_tokens_content
+   2. n_non_stop_words
+   3. n_non_stop_unique_tokens
+   4. num_hrefs
+   5. num_self_hrefs
+   6. average_token_length
+   7. num_keywords
+   8. data_channel_is_entertainment
+   9. data_channel_is_socmed
+  10. data_channel_is_tech
+  11. kw_min_min
+  12. kw_max_min
+  13. kw_avg_min
+  14. kw_avg_max
+  15. kw_min_avg
+  16. kw_max_avg
+  17. kw_avg_avg
+  18. self_reference_avg_sharess
+  19. weekday_is_friday
+  20. weekday_is_saturday
+  21. weekday_is_sunday
+  22. is_weekend
+  23. LDA_00
+  24. LDA_01
+  25. LDA_02
+  26. LDA_03
+  27. global_subjectivity
+  28. global_rate_positive_words
+  29. global_rate_negative_words
+  30. rate_negative_words
+
+5. ORTAK OZELLIKLER
+----------------------------------------------------------------------
+
+Her uc yontemde ortak ozellikler (5 adet):
+  - LDA_01
+  - LDA_02
+  - is_weekend
+  - kw_avg_avg
+  - kw_min_avg
+
+======================================================================
+Sonuclar basariyla kaydedildi.

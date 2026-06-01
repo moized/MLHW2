@@ -1,0 +1,6 @@
+﻿Yontem,Ozellik_Sayisi,Accuracy,F1_Skoru,Precision,Recall,Egitim_Suresi
+Tüm Özellikler,59,0.6562,0.6849,0.6703,0.7001,3.53s
+Filtreleme,15,0.6436,0.6776,0.6549,0.7020,0.58s
+Sarmalayıcı,15,0.6464,0.6779,0.6594,0.6975,1.31s
+Gömülü,15,0.6396,0.6823,0.6441,0.7254,0.75s
+Optimal,30,0.6529,0.6827,0.6664,0.6998,2.03s
