@@ -1,19 +1,14 @@
-# Sadece temiz kodlar kalacak şekilde ağır her şeyi engelliyoruz:
-# Sanal Ortamlar ve Paketler
+# Ağır kütüphaneler ve sanal ortamlar engelleniyor
 .venv/
 bdv_env/
 __pycache__/
 .pytest_cache/
 .ipynb_checkpoints/
 jdk-17/
-
-# Büyük Veri Setleri ve Klasörleri
 data/
 dataset/
 covid/
 covid1/
-
-# Ağır Sıkıştırılmış Arşivler ve Dosyalar
 *.zip
 *.rar
 *.tar.gz
