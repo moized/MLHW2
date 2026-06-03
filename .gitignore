@@ -1,17 +1,28 @@
-# Ağır kütüphaneler ve sanal ortamlar engelleniyor
-.venv/
-bdv_env/
+# Python
 __pycache__/
+*.py[cod]
 .pytest_cache/
 .ipynb_checkpoints/
-jdk-17/
+
+# Virtual environments
+.venv/
+venv/
+env/
+bdv_env/
+
+# Local data and generated artifacts
 data/
-dataset/
-covid/
-covid1/
+dataset/*.csv
+results/
+report/
+*.joblib
 *.zip
 *.rar
 *.tar.gz
 *.7z
-*.exe
 *.html
+
+# Local editor and system files
+*.code-workspace
+.DS_Store
+Thumbs.db
