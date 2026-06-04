@@ -14,7 +14,7 @@ bdv_env/
 data/
 dataset/*.csv
 results/
-report/
+reports/content/
 *.joblib
 *.zip
 *.rar
