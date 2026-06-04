@@ -20,4 +20,5 @@ MLHW2/
 │   ├── metrics.py     # Evaluation scorers (Accuracy, Precision, Recall, F1)
 │   └── utils.py       # Visualization helpers and boundary plotting engines
 ├── results/           # Cached operational metrics and evaluation sheets (Local Only)
+├── reports/content/   # Academic PDFs and LaTeX assets (Local Only / Untracked)
 └── requirements.txt   # Core pipeline dependencies
